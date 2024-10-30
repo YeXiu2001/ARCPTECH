@@ -1,0 +1,448 @@
+:root {
+    --primary-color: #11aefc;
+    --black-bg: #051323;
+    --main-font: 'Arial', Sans-serif;
+    --white-color: #F9F6EE;
+    
+    /* scrollbar */
+::-webkit-scrollbar {
+width: 5px;
+height: 5px;
+}
+
+::-webkit-scrollbar-track {
+-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+-webkit-border-radius: 10px;
+border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+-webkit-border-radius: 10px;
+border-radius: 10px;
+background: rgba(255, 255, 255, 0.3);
+-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
+::-webkit-scrollbar-thumb:window-inactive {
+background: rgba(255, 255, 255, 0.3);
+}
+}
+
+body{
+    background-color: var(--black-bg);
+    font-family: var(--main-font);
+    padding: 0;
+    margin: 0;
+    color: 	var(--white-color);
+    max-width: 100% !important; overflow-x: hidden !important;
+}
+
+#site_header{
+    /* border: 2px solid azure; */
+    padding: 0 1.5rem;
+    margin:0;
+    max-height: 10vh;
+    position: sticky;
+    top: 0;
+    background-color: var(--black-bg);
+    transition: 0.5s;
+}
+
+#header_nav{
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    max-height: 10vh;
+    /* border: 2px solid aquamarine; */
+
+    #header_logo{
+        height: 5rem;
+    }
+
+
+    
+    & ul{
+        display: flex;
+        margin: 0 auto;
+    }
+
+    & li{
+        display: inline;
+    }
+
+    & li a{
+        color: var(--white-color);
+        display: inline-block;
+        text-decoration: none;
+        text-align: center;
+        padding: .5rem;
+        letter-spacing: 0.1rem;
+    }
+
+    & li a:hover{
+        background-color: var(--primary-color);
+    }
+}
+
+.container{
+    margin-left: 7%;
+    margin-right: 7%;
+}
+
+#navhome {
+    display: flex;
+    align-items: center;
+    /* min-height: 90vh; */
+    margin-top: 10rem;
+    justify-content: center;
+    transition: 1s;
+    gap: 2rem;
+    flex-direction: column; /* Set default to column for smaller screens */
+
+    #homelogo {
+        width: 10rem; /* Default width for mobile */
+        aspect-ratio: 1;
+        border-radius: 2rem;
+        object-fit: cover;
+        box-shadow: 0px 0px 72px 16px rgba(17,174,252,0.59);
+    }
+
+    .text-wrapper {
+        text-align: left;
+    }
+
+    @media (min-width: 0px) and (max-width: 768px) { /* For tablets */
+        #homelogo {
+            width: 15rem;
+        }
+        .text-wrapper {
+            text-align: center;
+        }
+        .logos{
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+    @media (min-width: 769px) { /* For desktops */
+        flex-direction: row; /* Set row layout for larger screens */
+        #homelogo {
+            width: 20rem;
+        }
+       
+    }
+    
+    @media (min-width: 0px) and (max-width: 1024px) { /* For laptop */
+       .hometext {
+           font-size: 3rem;
+       }
+    }
+}
+
+.hometext {
+    font-size: 5rem;
+}
+
+.subtitle {
+    font-size: 2rem;
+}
+
+.logos {
+    display: flex;
+    margin-top: 1.5rem;
+    font-size: 3rem;
+    gap: 2rem;
+
+    i:hover {
+        color: var(--primary-color);
+        cursor: pointer;
+    }
+}
+
+
+.text-white{
+    color: 	#F9F6EE;
+}
+
+.text-primary{
+    color: var(--primary-color);
+}
+
+.text-red{
+    color:#f72bb3;
+}
+
+.text-orange{
+    color:#ff605c;
+}
+
+.text-yellow{
+    color:#ffbd44
+}
+
+.text-green{
+    color:#00ca4e;
+}
+
+.text-purple{
+    color:#5649f3;
+}
+
+#ctabtn{
+    margin: 0;
+    border-style: none;
+    color: var(--white-color);
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 0.5rem 1.5rem;
+    border-radius: 0.5rem;
+    transition: 0.5s;
+    background-size: 300% auto;
+    background-image: linear-gradient(to right, #5649f3 0%, #f72bb3 51%, #11aefc 100%);
+    
+    &:hover{
+        background-position: right center;
+        cursor: pointer;
+    }
+}
+
+#navAbout {
+    margin-top: 13rem;
+    /* border: 2px solid azure; */
+
+    .card {
+        width: 100%;
+        background-color: #24233b;
+        border-radius: 1rem;
+        transition: 0.5s;
+        display: flex;
+        /* align-items: center; */
+        /* justify-content: center; */
+        flex-direction: column;
+
+    }
+    
+    .card .code-container {
+        align-self: center;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        margin-bottom: 1rem;
+        text-align: left;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        background-color: rgb(73, 70, 92);
+        border-radius: 0.5rem;
+    }
+    
+  
+}
+
+
+
+.top {
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+}
+
+.circle {
+    padding: 0 4px;
+}
+
+.circle2 {
+    display: inline-block;
+    align-items: center;
+    width: 10px;
+    height: 10px;
+    padding: 1px;
+    border-radius: 5px;
+}
+
+.red {
+    background-color: #ff605c;
+}
+
+.yellow {
+    background-color: #ffbd44;
+}
+
+.green {
+    background-color: #00ca4e;
+}
+
+.header {
+    margin: 5px;
+    margin-top: 5px;
+    border-radius: 5px;
+}
+#title2 {
+    color: white;
+    padding-left: 50px;
+    font-size: 15px;
+}
+
+
+#navSkills{
+    margin-top: 5rem;
+    /* border: 2px solid azure; */
+
+    padding: 1rem;
+}
+
+#nscardwrapper {
+    overflow-x: auto; /* Enable horizontal scrolling */
+    padding-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Change to flex-start for better scrolling behavior */
+    gap: 2rem;
+    width: 100%; /* Set to a fixed width or max-width as needed */
+}
+
+/* Other styles remain unchanged */
+.nscard {
+    --background: linear-gradient(to right, #5749f3 0%, #08a9fa 51%, #11aefc 100%);
+    min-width: 13rem;
+    height: 13rem;
+    padding: 0.3rem;
+    border-radius: 1rem;
+    overflow: visible;
+    background: #f7ba2b;
+    background: var(--background);
+}
+
+.nscardcontent {
+    background: var(--black-bg);
+    color: var(--black-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    border-radius: .7rem;
+    flex-grow: 1;
+}
+
+.nscardimg {
+    width: 90%;
+    height: 90%;
+}
+
+#navProjects{
+    margin-top: 5rem;
+    /* border: 2px solid azure; */
+    /* padding: 1rem; */
+}
+   
+/* From Uiverse.io by EmmaxPlay */ 
+.npcard {
+    width: 100%;
+    padding-bottom: 1.5rem;
+    margin: 0 auto;
+    background-color: #24233b;
+    border-radius: 8px;
+    z-index: 1;
+    margin-bottom: 1rem;
+   }
+   
+   .tools {
+    display: flex;
+    align-items: center;
+    padding: 9px;
+    margin-bottom: .5rem;
+   }
+   
+   .circle {
+    padding: 0 4px;
+   }
+   
+   .box {
+    display: inline-block;
+    align-items: center;
+    width: 10px;
+    height: 10px;
+    padding: 1px;
+    border-radius: 50%;
+   }
+   
+   .red {
+    background-color: #ff605c;
+   }
+   
+   .yellow {
+    background-color: #ffbd44;
+   }
+   
+   .green {
+    background-color: #00ca4e;
+   }
+   
+.npcardcontent{
+    display: flex;
+    gap: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;  
+}
+
+.npcardcontent .captions{
+    width: 50%;
+    /* height: 20rem; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    /* border: 2px solid azure; */
+}
+
+.npcardcontent .captions .button-container {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.npcardcontent .npimg{
+    width: 50%;
+    height: 20rem;
+}
+
+.npimg img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .npcardcontent {
+        flex-direction: column;
+    }
+
+    .npcardcontent .captions {
+        width: 100%; /* Optional: Adjust width */
+    }
+
+    .npcardcontent .npimg {
+        width: 100%; /* Optional: Adjust width */
+        height: auto; /* Maintain aspect ratio */
+    }
+}
+
+.capbtn{
+    margin: 0;
+    border-style: none;
+    color: var(--white-color);
+    background-color: var(--primary-color);
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 0.5rem 1.5rem;
+    border-radius: 0.5rem;
+    transition: 0.5s;
+    
+    &:hover{
+        background-position: right center;
+        cursor: pointer;
+    }
+}
+
+
+
