@@ -3,6 +3,7 @@
     --black-bg: #051323;
     --main-font: 'Arial', Sans-serif;
     --white-color: #F9F6EE;
+    --dark-primary: #5649f3;
     
     /* scrollbar */
 ::-webkit-scrollbar {
@@ -153,7 +154,7 @@ body{
     font-size: 3rem;
     gap: 2rem;
 
-    i:hover {
+    a:hover {
         color: var(--primary-color);
         cursor: pointer;
     }
@@ -431,7 +432,7 @@ body{
     margin: 0;
     border-style: none;
     color: var(--white-color);
-    background-color: var(--primary-color);
+    background-color: var(--dark-primary);
     font-weight: bold;
     font-size: 1rem;
     padding: 0.5rem 1.5rem;
@@ -441,6 +442,7 @@ body{
     &:hover{
         background-position: right center;
         cursor: pointer;
+        background-color: var(--primary-color);
     }
 }
 
