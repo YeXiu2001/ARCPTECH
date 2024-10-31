@@ -462,7 +462,7 @@ body{
     border-radius: 0.5rem;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1023px) {
     .npcardcontent {
         flex-direction: column;
     }
