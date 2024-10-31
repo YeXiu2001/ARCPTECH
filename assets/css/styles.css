@@ -437,7 +437,7 @@ body{
     padding: 0.5rem 1.5rem;
     border-radius: 0.5rem;
     transition: 0.5s;
-    
+    text-decoration: none;
     &:hover{
         background-position: right center;
         cursor: pointer;
