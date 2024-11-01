@@ -47,6 +47,7 @@ body{
     top: 0;
     background-color: var(--black-bg);
     transition: 0.5s;
+    z-index: 1000; /* Ensure the header stays on top */
 }
 
 #header_nav{
@@ -202,6 +203,15 @@ body{
            font-size: 3rem;
        }
     }
+
+    @media (max-width: 588px){
+        .hometext {
+            font-size: 2rem;
+        }
+        .subtitle {
+            font-size: 1.5rem;
+        }
+    }
 }
 
 .hometext {
@@ -264,7 +274,7 @@ body{
     transition: 0.5s;
     background-size: 300% auto;
     background-image: linear-gradient(to right, #5649f3 0%, #f72bb3 51%, #11aefc 100%);
-    
+    text-decoration: none;
     &:hover{
         background-position: right center;
         cursor: pointer;
@@ -362,6 +372,7 @@ body{
 #navSkills{
     margin-top: 5rem;
     padding: 1rem;
+    padding-top: 6rem; /* Add padding to create space between header and section */
     overflow: hidden; /* Hide the overflow to create the scrolling effect */
 }
 
@@ -414,8 +425,6 @@ body{
     .sec_header{
         font-size: 1.5rem;
     }
-
-    
 }
 
 .nscardcontent {
