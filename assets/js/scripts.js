@@ -48,5 +48,5 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function previewResume() {
-    window.open('/assets/Paraiso_cv.pdf', '_blank');
+    window.open('/assets/Paraiso_CV.pdf', '_blank');
 }
